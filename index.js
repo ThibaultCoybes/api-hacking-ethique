@@ -26,15 +26,6 @@ const limiter = rateLimit({
 });
 app.use(limiter);
 
-// PostgreSQL connection config
-const pool = new Pool({
-  user: 'dvwa',
-  host: 'localhost',
-  database: 'dvwadb',
-  password: 'moktu5',
-  port: 5432,
-});
-
 // AUTH ROUTES
 app.use('/auth', authRoute);
 app.use('/messages', messageRoute);
